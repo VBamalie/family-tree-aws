@@ -1,0 +1,31 @@
+exports.handler = async (event) => {
+    console.log(event)
+    const personId = event.pathParameters.personId
+    const Person = {
+        personId: personId,
+    }
+    response = {
+        statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "*"
+        },
+        body: JSON.stringify(Person)
+    }
+    return response
+}
+// /**
+//  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
+//  */
+// exports.handler = async (event) => {
+//     console.log(`EVENT: ${JSON.stringify(event)}`);
+//     return {
+//         statusCode: 200,
+//     //  Uncomment below to enable CORS requests
+//     //  headers: {
+//     //      "Access-Control-Allow-Origin": "*",
+//     //      "Access-Control-Allow-Headers": "*"
+//     //  }, 
+//         body: JSON.stringify('Hello from Lambda!'),
+//     };
+// };

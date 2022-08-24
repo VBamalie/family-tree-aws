@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/nuclear/{personalId}": {
+      "name": "/nuclear/{personalId}",
+      "lambdaFunction": "singlePerson",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
